@@ -5,6 +5,17 @@
     <title>Blog</title>
 </head>
 <body>
-    <p>Hello World!</p>
+    <div>
+        <h1>Blog</h1>
+    </div>
+    <div>
+        {% for post in posts %}
+            <div>
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.text|linebreaksbr }}</p>             <!--- parse text to line breaker to replace \n\r with <br> --->
+                <p>published: {{ post.published_date }}</p>
+            </div>
+        {% endfor %}
+    </div>
 </body>
 </html>
