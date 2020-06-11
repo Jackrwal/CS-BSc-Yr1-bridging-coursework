@@ -54,6 +54,9 @@ h1, h2, h3, h4 {
     margin-bottom: 50px;
     background-color: white;
     border-radius: 10px;
+}
+
+.linked{
     cursor: pointer;
 }
 
