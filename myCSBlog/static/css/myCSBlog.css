@@ -1,0 +1,59 @@
+
+
+/* ---- Set up page header style ---- */
+
+.page-header {
+    background-color: aqua;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    padding: 2px 5px 5px 10px;
+    border-bottom-width: 0;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active{
+    color: whitesmoke;
+    font-size: 20pt;
+}
+
+/* ---- Set up page body style ---- */
+
+body {
+    background-color: #d5d5d5;
+}
+
+/* Generic Set Headers Font */
+h1, h2, h3, h4 {
+    font-family: 'PT+Serif', cursive; /* Fall-back to cursive font */
+}
+
+/* align content */
+.content {
+    align-content: center;
+}
+
+/* Style for Posts */
+.post p {
+    font-family: 'Roboto+Slab', serif; /* Fall-back to serif font*/
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+.post h2, .post h2 a, .post h2 a:visited {
+    color: #000000;
+    margin-left: 5px;
+}
+
+.post {
+    padding: 2px 2px 2px 2px;
+    margin-bottom: 50px;
+}
+
+.post {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.date p {
+    color: #828282;
+    font-size: 14px;
+}

@@ -55,7 +55,7 @@ ROOT_URLCONF = 'CS_BSc_Yr1_bridging_coursework.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
+        'DIRS': [os.path.join(BASE_DIR, 'myCSBlog/templates')]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
