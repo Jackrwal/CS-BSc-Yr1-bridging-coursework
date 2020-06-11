@@ -18,3 +18,6 @@ def post(request, pk):
 
     # return html doc, using query result to render html from post.html template
     return render(request, 'myCSBlog/post.html', {'post' : post})
+
+def handler404(request, exception):
+    return render(request, 'myCSBlog/404.html', status=404)

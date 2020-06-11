@@ -21,3 +21,4 @@ urlpatterns = [
     path('', include('myCSBlog.urls')) # redirect site root to web app's URLs
 ]
 
+handler404 = 'myCSBlog.views.handler404'
