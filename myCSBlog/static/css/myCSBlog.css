@@ -10,9 +10,15 @@
     border-bottom-width: 0;
 }
 
+/* Turn off link underline on hover */
+.page-header a:hover{
+    text-decoration: none;
+}
+
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active{
     color: whitesmoke;
     font-size: 20pt;
+    text-underline-mode: Off;
 }
 
 /* ---- Set up page body style ---- */
@@ -46,14 +52,28 @@ h1, h2, h3, h4 {
 .post {
     padding: 2px 2px 2px 2px;
     margin-bottom: 50px;
-}
-
-.post {
     background-color: white;
     border-radius: 10px;
+}
+
+.post{
+    cursor: pointer;
 }
 
 .date p {
     color: #828282;
     font-size: 14px;
+}
+
+.return-home a, .return-home a:active, .return-home a:visited, .return-home h2{
+    text-underline-mode: on;
+    color: grey;
+    background-color: aqua;
+    display: inline-block;
+    padding: 5px 5px 5px 5px;
+    border-radius: 15px;
+}
+
+.return-home a:hover{
+    text-decoration: none;
 }

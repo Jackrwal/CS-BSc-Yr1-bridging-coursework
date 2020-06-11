@@ -1,0 +1,22 @@
+{% extends 'myCSBlog/base.html' %}
+
+<!--HTML Block to display a post-->
+{% block content %}
+    <div class="post">
+        {% if post.published_date %}
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+            <div class="date">
+                <p>published: {{ post.published_date }}</p>
+            </div>
+
+        {% else %}
+            <div class="unpublished-post">
+                <h2>Sorry! This post has not been published.</h2>
+            </div>
+        {% endif %}
+    </div>
+    <div class="return-home">
+        <h2><a href="{% url 'post-list' %}">Home</a></h2>
+    </div>
+{% endblock %}
