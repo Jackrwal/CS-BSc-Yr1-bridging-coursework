@@ -14,22 +14,13 @@
     <meta charset="UTF-8">
 </head>
 <body>
-
     <div class="page-header">
         <h1>The CS Blog</h1>
     </div>
-
     <div class="content container">
-        {% for post in posts %}
-            <div class="post">
-                <h2>{{ post.title }}</h2>
-                <p>{{ post.text|linebreaksbr }}</p>
-                <div class="date">
-                    <p>published: {{ post.published_date }}</p>
-                </div>
-            </div>
-        {% endfor %}
+        <!-- Block for HTML content to be auto-inserted into-->
+        {% block content %}
+        {% endblock %}
     </div>
-
 </body>
 </html>
