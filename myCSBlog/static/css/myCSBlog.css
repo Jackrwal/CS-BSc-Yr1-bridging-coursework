@@ -4,7 +4,7 @@
 
 .page-header {
     background-color: aqua;
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 20px;
     padding: 2px 5px 5px 10px;
     border-bottom-width: 0;
@@ -38,6 +38,14 @@ h1, h2, h3, h4 {
 }
 
 /* Style for Posts */
+.post {
+    display: grid;
+    padding: 2px 2px 2px 2px;
+    margin-bottom: 50px;
+    background-color: white;
+    border-radius: 10px;
+}
+
 .post p {
     font-family: 'Roboto+Slab', serif; /* Fall-back to serif font*/
     font-size: 20px;
@@ -49,33 +57,22 @@ h1, h2, h3, h4 {
     margin-left: 5px;
 }
 
-.post {
-    padding: 2px 2px 2px 2px;
-    margin-bottom: 50px;
-    background-color: white;
-    border-radius: 10px;
+.post-body{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
 }
 
-.linked{
-    cursor: pointer;
+.post-date{
+    grid-row-start: 3;
+    grid-column-start: 1;
 }
 
-.date p {
-    color: #828282;
-    font-size: 14px;
-}
-
-.return-home a, .return-home a:active, .return-home a:visited, .return-home h2{
-    text-underline-mode: on;
-    color: grey;
-    background-color: aqua;
-    display: inline-block;
-    padding: 5px 5px 5px 5px;
-    border-radius: 15px;
-}
-
-.return-home a:hover{
-    text-decoration: none;
+.post-edit{
+    grid-row-start: 3;
+    grid-column-start: 3;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 /* 404 Page Style */
@@ -86,4 +83,28 @@ h1, h2, h3, h4 {
     text-align: center;
     padding: 20px 20px 20px 20px;
     border-radius: 15px;
+}
+
+/* Other styles */
+.linked{
+    cursor: pointer;
+}
+
+.date p {
+    color: #828282;
+    font-size: 14px;
+}
+
+.link-btn a, .link-btn a:active, .link-btn a:visited, .link-btn h2{
+    text-underline-mode: on;
+    color: grey;
+    background-color: aqua;
+    display: inline-block;
+    padding: 5px 5px 5px 5px;
+    border-radius: 15px;
+}
+
+.link-btn a:hover{
+    color: white;
+    text-decoration: none;
 }

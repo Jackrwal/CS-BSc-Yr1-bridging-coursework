@@ -1,0 +1,13 @@
+{% extends 'myCSBlog/base.html' %}
+
+<!-- Block containing a Django created Form to create a new post -->
+{% block content %}
+    <h2>New post</h2>
+
+    <!--On completion form is Posted back to the api and stored as a post model object-->
+    <form method="POST" class="post-form">{% csrf_token %} <!-- some sort of Django implemented secure token -->
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+
+{% endblock %}
