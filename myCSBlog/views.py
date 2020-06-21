@@ -35,6 +35,12 @@ def newPost(request):
             post.author = request.user
             post.published_date = timezone.now()
 
+            # set post snatch
+            if len(post.text) > 500:
+                post.snatch = post.text[:247] + "..."
+            else:
+                post.snatch = post.text
+
             # save model to db
             post.save()
 
@@ -58,6 +64,13 @@ def editPost(request, pk):
             post = response.save(commit = False)
             post.author = request.user
             post.published_date = timezone.now()
+
+            # set post snatch
+            if len(post.text) > 500:
+                post.snatch = post.text[:247] + "..."
+            else:
+                post.snatch = post.text
+
             post.save()
 
             return redirect('post', pk = post.pk)

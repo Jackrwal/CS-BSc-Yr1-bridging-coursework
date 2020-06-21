@@ -24,7 +24,7 @@ SECRET_KEY = 'oo3i!z%_8ouub%7&-%!1au)z&!jk@+703_6yf(698y$4@thu^j'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # Note to use 'python manage.py runserver --insecure' during testing to load CSS
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
