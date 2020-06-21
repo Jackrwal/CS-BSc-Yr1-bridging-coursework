@@ -5,17 +5,21 @@
 
     <!--only allow authenticated users to create a post-->
     {% if user.is_authenticated %}
-        <div>
-            <h2 class="link-btn linked"><a href="{% url 'postNew' %}">write a new post</a></h2>
+        <div class="post-container new-post">
+            <div class="new-post-btn linked"  onclick="location.href='{% url 'postNew' %}'">
+                <p>write a new post ...</p>
+            </div>
         </div>
     {% endif %}
 
     <!-- List of posts using Django Template to replace with html-->
     {% for post in posts %}
-        <div class="post linked" onclick="location.href='{% url 'post' pk=post.pk %}'">
-            <h2>{{ post.title }}</h2>
-            <p>{{ post.text|linebreaksbr }}</p>
-            <div class="date">
+        <div class="post-container post linked" onclick="location.href='{% url 'post' pk=post.pk %}'">
+            <div class="post-body">
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+            <div class="post-date date">
                 <p>published: {{ post.published_date }}</p>
             </div>
         </div>

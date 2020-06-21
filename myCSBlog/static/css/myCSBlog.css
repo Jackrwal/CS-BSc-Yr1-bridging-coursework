@@ -3,7 +3,7 @@
 /* ---- Set up page header style ---- */
 
 .page-header {
-    background-color: aqua;
+    background-color: royalblue;
     margin-top: 0;
     margin-bottom: 20px;
     padding: 2px 5px 5px 10px;
@@ -16,7 +16,7 @@
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active{
-    color: whitesmoke;
+    color: white;
     font-size: 20pt;
     text-underline-mode: Off;
 }
@@ -27,27 +27,40 @@ body {
     background-color: #d5d5d5;
 }
 
-/* Generic Set Headers Font */
+/* Set Generic Fonts */
 h1, h2, h3, h4 {
     font-family: 'PT+Serif', cursive; /* Fall-back to cursive font */
 }
 
-/* align content */
-.content {
-    align-content: center;
+p {
+    font-family: 'Roboto+Slab', serif; /* Fall-back to serif font */
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Aligns items to each other (rather than aligning the gaps between them) */
 }
 
 /* Style for Posts */
-.post {
-    display: grid;
+
+.post-container {
+    width: 60%;
     padding: 2px 2px 2px 2px;
     margin-bottom: 50px;
     background-color: white;
     border-radius: 10px;
 }
 
+.post {
+    display: grid;
+    grid-template-columns: auto 50px;
+    grid-template-rows: auto auto 50px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
 .post p {
-    font-family: 'Roboto+Slab', serif; /* Fall-back to serif font*/
     font-size: 20px;
     margin-left: 5px;
 }
@@ -57,22 +70,72 @@ h1, h2, h3, h4 {
     margin-left: 5px;
 }
 
-.post-body{
+.post-heading{
     grid-row-start: 1;
-    grid-row-end: 3;
+    grid-column-start: 1;
+}
+
+.post-body{
+    grid-row-start: 2;
     grid-column-start: 1;
 }
 
 .post-date{
     grid-row-start: 3;
     grid-column-start: 1;
+    align-self: end;
 }
 
 .post-edit{
     grid-row-start: 3;
-    grid-column-start: 3;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    grid-column-start: 2;
+    align-self: center;
+    justify-self: center;
+}
+
+.post-home{
+    grid-row-start: 1;
+    grid-column-start: 2;
+    align-self: center;
+    justify-self: center;
+
+}
+
+/* New Post Btn Style */
+.new-post{
+    width: 50%;
+    background-color: white;
+    padding: 2px 2px 2px 2px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-post-btn p {
+    padding: 5px 5px 5px 5px;
+    margin-bottom: -5px;
+    margin-left: -10px;
+
+    font-size: 18px;
+}
+
+.new-post-btn{
+    width: 95%;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    padding-left: 25px;
+    border-radius: 10px;
+
+    border-style: solid;
+    border-width: thin;
+    border-color: white;
+}
+
+.new-post-btn:hover{
+    border-color: royalblue;
 }
 
 /* 404 Page Style */
@@ -95,16 +158,10 @@ h1, h2, h3, h4 {
     font-size: 14px;
 }
 
-.link-btn a, .link-btn a:active, .link-btn a:visited, .link-btn h2{
-    text-underline-mode: on;
-    color: grey;
-    background-color: aqua;
-    display: inline-block;
-    padding: 5px 5px 5px 5px;
-    border-radius: 15px;
+.link-btn{
+    color: black;
 }
 
-.link-btn a:hover{
-    color: white;
-    text-decoration: none;
+.link-btn:hover{
+    color: royalblue;
 }
